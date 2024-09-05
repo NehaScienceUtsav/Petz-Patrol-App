@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Animal Rescue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <!-- Dropdown Menu for Services -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Get Involved</a>
+                <div class="dropdown-content">
+                    <a href="adopt.html">Adopt a Pet</a>
+                    <a href="report.html">Report an Animal</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="collaborate.html">Collaborate</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Volunteer Information -->
+    <section class="volunteer-info">
+        <h2>Become a Volunteer</h2>
+        <p>Volunteering with us is a rewarding experience that directly helps animals in need. We offer various roles including animal care, event support, and more.</p>
+    </section>
+
+    <!-- Volunteer Opportunities -->
+    <section class="volunteer-opportunities">
+        <h2>Volunteer Opportunities</h2>
+        <ul>
+            <li>Animal Care</li>
+            <li>Event Planning and Support</li>
+            <li>Fundraising</li>
+            <li>Community Outreach</li>
+        </ul>
+    </section>
+
+    <!-- Volunteer Application Form -->
+    <section class="volunteer-form">
+        <h2>Join Us Today</h2>
+        <form action="submit-volunteer.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="role">Preferred Role:</label>
+            <select id="role" name="role">
+                <option value="animal-care">Animal Care</option>
+                <option value="event-support">Event Support</option>
+                <option value="fundraising">Fundraising</option>
+                <option value="outreach">Community Outreach</option>
+            </select>
+
+            <button type="submit">Apply Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Animal Rescue. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

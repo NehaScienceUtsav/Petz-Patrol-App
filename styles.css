@@ -1,0 +1,997 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #004d61;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #004d61;
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #ffd700;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://people.com/thmb/MOKsLjwdAlECannO7cXBkb5szLQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/puppies-ccca1b0776bb47c0b61b2e8a52b9dd92.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0 0 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #004d61;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* History Section */
+.history {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.history h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.history p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team Section */
+.team {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    color: #004d61;
+    margin: 15px 0 5px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Impact Section */
+.impact {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.impact h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.impact p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #004d61;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+/* Cards Section */
+.action-cards {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.action-cards h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center text within the card */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px; /* Space above the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.card-content {
+    padding: 20px;
+    width: 100%;
+}
+
+.card-content h3 {
+    font-size: 1.6em;
+    color: #004d61;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.card-content .btn {
+    padding: 10px 20px;
+    background-color: #004d61;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.card-content .btn:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+/* Footer Section */
+footer {
+    background-color: #004d61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero p {
+        font-size: 1.1em;
+    }
+}
+/* Blog Articles Section */
+.blog-articles {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.blog-articles h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 40px;
+}
+
+.blog-articles article {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-articles article:hover {
+    transform: translateY(-10px);
+}
+
+.blog-articles article h3 {
+    font-size: 1.8em;
+    color: #004d61;
+    margin: 15px 0 10px;
+}
+
+.blog-articles article p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.blog-articles article .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004d61;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.blog-articles article .btn:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-articles article {
+        max-width: 90%;
+    }
+}
+
+
+/* Search and Filter Section */
+.search-filter {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.search-filter h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 30px;
+}
+
+.search-filter form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-filter input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-filter button {
+    padding: 15px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-filter button:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+/* Animal Profiles Section */
+.animal-cards-container {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animal-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.animal-card:hover {
+    transform: translateY(-10px);
+}
+
+.animal-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+
+.animal-card h3 {
+    font-size: 1.8em;
+    color: #004d61;
+    margin: 10px 0;
+}
+
+.animal-card p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.animal-card .btn {
+    padding: 10px 20px;
+    background-color: #004d61;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.animal-card .btn:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+/* Collaborate Section */
+.collaborate {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.collaborate h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.collaborate p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.collaborate form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.collaborate form label {
+    display: block;
+    font-size: 1.1em;
+    color: #004d61;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.collaborate form input, .collaborate form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.collaborate form textarea {
+    resize: vertical;
+}
+
+.collaborate form button {
+    padding: 15px 30px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.collaborate form button:hover {
+    background-color: #00374d;
+}
+/* Report Form Section */
+.report-form {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.report-form h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 30px;
+}
+
+.report-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left for form labels */
+}
+
+.report-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #004d61;
+    margin-bottom: 5px;
+}
+
+.report-form input[type="text"],
+.report-form select,
+.report-form textarea,
+.report-form input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.report-form button {
+    padding: 15px 30px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.report-form button:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+/* Volunteer Style */
+/* Volunteer Information Section */
+.volunteer-info {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.volunteer-info h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.volunteer-info p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Volunteer Opportunities Section */
+.volunteer-opportunities {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.volunteer-opportunities h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.volunteer-opportunities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.volunteer-opportunities ul li {
+    font-size: 1.2em;
+    color: #004d61;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.volunteer-opportunities ul li:last-child {
+    border-bottom: none;
+}
+
+.volunteer-form {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.volunteer-form h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.volunteer-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.volunteer-form label {
+    font-size: 1.2em;
+    color: #004d61;
+    margin-bottom: 5px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.volunteer-form input, .volunteer-form select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.volunteer-form button {
+    padding: 15px 30px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: span 2;
+}
+
+.volunteer-form button:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
+
+/* General Styles for Donation Section */
+.donate-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.donate-info .text {
+    flex: 1;
+    text-align: center;
+}
+
+.donate-info .text h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.donate-info .text p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.donate-info .image {
+    flex: 1;
+    text-align: center;
+}
+
+.donate-info .image img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Donation Tiers */
+.donate-tiers {
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.donate-tiers h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.tier {
+    display: inline-block;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.tier h3 {
+    font-size: 1.6em;
+    color: #004d61;
+    margin-bottom: 10px;
+}
+
+.tier p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Donation Form Styles */
+.donate-form {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.donate-form h2 {
+    font-size: 2.5em;
+    color: #004d61;
+    margin-bottom: 20px;
+}
+
+.donate-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.donate-form label {
+    align-self: center;
+    text-align: right;
+    padding-right: 20px; /* Increased padding for better alignment */
+    font-size: 1.2em;
+    color: #004d61;
+}
+
+.donate-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.donate-form button {
+    grid-column: span 2;
+    padding: 15px;
+    background-color: #004d61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-form button:hover {
+    background-color: #ffd700;
+    color: #004d61;
+}
+
